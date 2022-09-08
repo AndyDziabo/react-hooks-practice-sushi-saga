@@ -8,9 +8,12 @@ function SushiContainer({ sushi, onEatSushi, moneyTotal }) {
   const sushiDisplay = sushi.slice(index, index + 4);
 
   function handleClickMore() {
-    setIndex(index + 4);
+    if(index < 96){
+      setIndex(index + 4);
+    }else{
+      setIndex(0);
+    }
   }
-
 
   return (
     <div className="belt">

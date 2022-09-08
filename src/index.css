@@ -43,6 +43,8 @@ body {
   left: 300px;
 }
 
+
+
 .sushi-details {
   margin: auto;
   text-align: center;
@@ -69,6 +71,10 @@ body {
   max-width: 100px;
 }
 
+.add-money {
+  padding-top: 250px;
+}
+
 .table {
   grid-area: tb;
   background-image: url("https://storybookstorage.s3.amazonaws.com/items/images/000/152/688/original/Table.png?1444827374");
@@ -78,4 +84,28 @@ body {
   height: 428px;
   width: 700px;
   margin: auto;
+}
+
+.cash-input {
+  width: 180px;
+}
+
+.wallet-full {
+  grid-area: tb;
+  background-image: url("./img/walletFull.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 250px;
+  width: 285px;
+}
+
+.wallet-empty {
+  grid-area: tb;
+  background-image: url("./img/walletEmpty.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 250px;
+  width: 275px;
 }

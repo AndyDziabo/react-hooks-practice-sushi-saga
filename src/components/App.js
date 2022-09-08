@@ -20,10 +20,14 @@ function App() {
     setPlates([...plates, money]);
   }
 
+  function handleAddCash(cash) {
+    setMoneyTotal(moneyTotal + cash);
+  }
+
   return (
     <div className="app">
       <SushiContainer sushi={sushi} onEatSushi={handleEatSushi} moneyTotal={moneyTotal} />
-      <Table plates={plates} moneyRemaining={moneyTotal} />
+      <Table plates={plates} moneyRemaining={moneyTotal} onAddCash={handleAddCash} />
     </div>
   );
 }

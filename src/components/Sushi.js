@@ -1,24 +1,24 @@
-import React, {useState} from "react";
+import React from "react";
 
 function Sushi({ sushi, onEatSushi, moneyTotal }) {
-  const [eaten, setEaten] = useState(false);
-
 
   function handleClick() {
     if(moneyTotal >= sushi.price){
-      setEaten(true);
       onEatSushi(sushi.price);
+      sushi.img_url="";
     }
   }
 
+
   return (
     <div className="sushi">
-      <div className="plate" onClick={handleClick}>
-        {eaten ? null : (
+      <div className="plate" >
+        {!sushi.img_url ? null : (
           <img
             src={sushi.img_url}
             alt={sushi.name}
             width="100%"
+            onClick={handleClick}
           />
         )}
       </div>
